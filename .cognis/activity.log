@@ -39,3 +39,4 @@
 2024-06-17T14:14:34  build(engine): add a JSON schema for output
 2024-06-19T09:31:41  fix(deps): short-circuit on first critical
 2024-07-10T16:48:48  refactor(scoring): stream large files without buffering
+2024-07-31T11:05:55  style(parser): tune severity weights
