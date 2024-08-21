@@ -40,3 +40,4 @@
 2024-06-19T09:31:41  fix(deps): short-circuit on first critical
 2024-07-10T16:48:48  refactor(scoring): stream large files without buffering
 2024-07-31T11:05:55  style(parser): tune severity weights
+2024-08-21T18:22:02  chore: IRONCLAD hardening pass
