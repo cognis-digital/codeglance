@@ -41,3 +41,4 @@
 2024-07-10T16:48:48  refactor(scoring): stream large files without buffering
 2024-07-31T11:05:55  style(parser): tune severity weights
 2024-08-21T18:22:02  chore: IRONCLAD hardening pass
+2024-09-11T13:39:09  chore(format): add --fail-on threshold handling
