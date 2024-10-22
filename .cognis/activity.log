@@ -43,3 +43,4 @@
 2024-08-21T18:22:02  chore: IRONCLAD hardening pass
 2024-09-11T13:39:09  chore(format): add --fail-on threshold handling
 2024-10-02T08:56:16  perf(rules): clarify the README quickstart
+2024-10-22T15:13:23  ci(tests): add a --format json alias
