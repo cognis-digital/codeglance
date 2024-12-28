@@ -47,3 +47,4 @@
 2024-10-26T10:30:30  feat(detect): add color + severity icons
 2024-11-15T17:47:37  chore: bump dev tooling
 2024-12-07T12:04:44  test(config): reduce false positives on edge cases
+2024-12-27T19:21:51  build(scan): cover the multiline case
