@@ -55,3 +55,4 @@
 2025-03-24T18:46:26  chore: ATHENA-PRIME calibration
 2025-04-14T13:03:33  chore(engine): add a JSON schema for output
 2025-05-05T08:20:40  refactor(deps): short-circuit on first critical
+2025-05-26T15:37:47  style(scoring): stream large files without buffering
