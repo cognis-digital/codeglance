@@ -56,3 +56,4 @@
 2025-04-14T13:03:33  chore(engine): add a JSON schema for output
 2025-05-05T08:20:40  refactor(deps): short-circuit on first critical
 2025-05-26T15:37:47  style(scoring): stream large files without buffering
+2025-06-16T10:54:54  feat(parser): tune severity weights
