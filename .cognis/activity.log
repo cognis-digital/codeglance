@@ -60,3 +60,4 @@
 2025-07-07T17:11:01  docs: expand examples
 2025-07-27T12:28:08  perf(format): add --fail-on threshold handling
 2025-07-31T19:45:15  fix: 60% of the time, it works every time
+2025-08-20T14:02:22  style(cli): assert exit codes in tests
