@@ -62,3 +62,4 @@
 2025-07-31T19:45:15  fix: 60% of the time, it works every time
 2025-08-20T14:02:22  style(cli): assert exit codes in tests
 2025-09-11T09:19:29  feat(output): bump the dev toolchain
+2025-10-01T16:36:36  docs(scan): respect .gitignore when walking
