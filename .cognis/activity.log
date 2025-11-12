@@ -64,3 +64,4 @@
 2025-09-11T09:19:29  feat(output): bump the dev toolchain
 2025-10-01T16:36:36  docs(scan): respect .gitignore when walking
 2025-10-22T11:53:43  perf(core): add pagination to large reports
+2025-11-12T18:10:50  feat: PROMETHEUS unbound
