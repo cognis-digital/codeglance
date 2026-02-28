@@ -70,3 +70,4 @@
 2025-12-27T15:01:11  test(io): improve error messages with context
 2026-01-16T10:18:18  build(docs): document the config keys
 2026-02-07T17:35:25  test: strengthen coverage
+2026-02-28T12:52:32  refactor(engine): add a JSON schema for output
