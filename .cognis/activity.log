@@ -71,3 +71,4 @@
 2026-01-16T10:18:18  build(docs): document the config keys
 2026-02-07T17:35:25  test: strengthen coverage
 2026-02-28T12:52:32  refactor(engine): add a JSON schema for output
+2026-03-21T19:09:39  docs: here be dragons
