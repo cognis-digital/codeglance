@@ -75,3 +75,4 @@
 2026-04-11T14:26:46  style(tests): wire the MCP tool schema
 2026-04-13T09:43:53  build(format): make timestamps timezone-aware
 2026-05-05T16:00:00  chore(rules): guard against ReDoS in patterns
+2026-05-25T11:17:07  perf(config): fix off-by-one in line numbers
