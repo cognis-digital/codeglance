@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: codeglance, labels: { app: codeglance } }
+spec:
+  replicas: 1
+  selector: { matchLabels: { app: codeglance } }
+  template:
+    metadata: { labels: { app: codeglance } }
+    spec:
+      containers:
+        - name: codeglance
+          image: ghcr.io/cognis-digital/codeglance:latest
+          ports: [{ containerPort: 8000 }]
+          resources:
+            requests: { cpu: "50m", memory: "64Mi" }
+            limits: { cpu: "500m", memory: "256Mi" }
+---
+apiVersion: v1
+kind: Service
+metadata: { name: codeglance }
+spec:
+  selector: { app: codeglance }
+  ports: [{ port: 80, targetPort: 8000 }]
