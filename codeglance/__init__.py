@@ -1,29 +1,11 @@
-"""CODEGLANCE — repo onboarding map: architecture + hotspots for humans and agents.
-
-Scans a codebase and produces a compact, machine-and-human readable map of its
-structure: per-directory module groupings, per-file size/complexity/import-degree
-metrics, dependency edges between internal modules, and a ranked list of
-"hotspots" (files most worth reading first when onboarding).
-
-Standard library only. No network. No install.
-"""
-from .core import (
-    scan_repo,
-    build_map,
-    rank_hotspots,
-    RepoMap,
-    FileInfo,
-)
-
-TOOL_NAME = "codeglance"
-TOOL_VERSION = "1.0.0"
-
-__all__ = [
-    "scan_repo",
-    "build_map",
-    "rank_hotspots",
-    "RepoMap",
-    "FileInfo",
-    "TOOL_NAME",
-    "TOOL_VERSION",
-]
+"""codeglance — part of the Cognis Neural Suite."""
+try:  # re-export the tool's public API + identity from core
+    from codeglance.core import *  # noqa: F401,F403
+except Exception:  # pragma: no cover
+    pass
+try:
+    from codeglance.core import TOOL_NAME, TOOL_VERSION
+except Exception:  # pragma: no cover
+    TOOL_NAME = "codeglance"
+    TOOL_VERSION = "0.1.0"
+__version__ = TOOL_VERSION
