@@ -1,0 +1,10 @@
+{
+  "name": "@cognis/codeglance",
+  "version": "0.2.0",
+  "description": "JavaScript port of codeglance (Cognis Neural Suite)",
+  "bin": {
+    "codeglance": "index.js"
+  },
+  "license": "LicenseRef-COCL-1.0",
+  "type": "module"
+}
