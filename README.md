@@ -20,6 +20,35 @@ pip install cognis-codeglance
 codeglance scan .            # → prioritized findings in seconds
 ```
 
+## Usage — step by step
+
+1. **Install** the tool:
+
+   ```bash
+   pip install cognis-codeglance
+   ```
+
+2. **Build an onboarding map** of a repo (packages + hotspots + files). Path defaults to `.`:
+
+   ```bash
+   codeglance map ./my-repo
+   ```
+
+3. **Jump to what matters** — the ranked files to read first, or the internal dependency edges:
+
+   ```bash
+   codeglance hotspots ./my-repo --top 15
+   codeglance deps ./my-repo --format json
+   ```
+
+4. **Read the result.** `map` summarizes file/line/package counts and languages, then lists packages and hotspots (score, fan-in, complexity, lines). Use `--format json` to feed an agent or dashboard.
+
+5. **Automate.** Emit the map as a JSON artifact for onboarding bots or CI:
+
+   ```bash
+   codeglance map . --format json > codeglance.json
+   ```
+
 ## Contents
 
 - [Why codeglance?](#why) · [Features](#features) · [Quick start](#quick-start) · [Example](#example) · [Architecture](#architecture) · [AI stack](#ai-stack) · [How it compares](#how-it-compares) · [Integrations](#integrations) · [Install anywhere](#install-anywhere) · [Related](#related) · [Contributing](#contributing)
