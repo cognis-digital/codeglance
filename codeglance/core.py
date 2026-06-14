@@ -231,9 +231,11 @@ def _analyze_file(abspath: str, rel: str) -> FileInfo:
 
 def scan_repo(root: str) -> List[FileInfo]:
     """Scan a repo root and return per-file metrics (no graph resolution yet)."""
+    if not root or not isinstance(root, str):
+        raise ValueError(f"root must be a non-empty string, got {root!r}")
     root = os.path.abspath(root)
     if not os.path.isdir(root):
-        raise NotADirectoryError(root)
+        raise NotADirectoryError(f"Not a directory: {root!r}")
     infos: List[FileInfo] = []
     for rel in _iter_source_files(root):
         infos.append(_analyze_file(os.path.join(root, rel), rel))
@@ -343,6 +345,8 @@ def rank_hotspots(files: List[FileInfo], top: int = 10) -> List[FileInfo]:
     internal files import it). Heavily-imported, complex, large files are the
     load-bearing modules an onboarding agent should read before anything else.
     """
+    if not isinstance(top, int) or top < 1:
+        raise ValueError(f"top must be a positive integer, got {top!r}")
     if not files:
         return []
     max_lines = max((f.code_lines for f in files), default=1) or 1

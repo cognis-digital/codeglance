@@ -82,13 +82,22 @@ def _build_parser() -> argparse.ArgumentParser:
 def main(argv: Optional[List[str]] = None) -> int:
     parser = _build_parser()
     args = parser.parse_args(argv)
+    if hasattr(args, "top") and args.top < 1:
+        print(
+            f"{TOOL_NAME}: error: --top must be a positive integer, got {args.top}",
+            file=sys.stderr,
+        )
+        return 2
     try:
         rmap = build_map(args.path)
     except (FileNotFoundError, NotADirectoryError) as exc:
-        print(f"{TOOL_NAME}: error: not a directory: {exc}", file=sys.stderr)
+        print(f"{TOOL_NAME}: error: {exc}", file=sys.stderr)
         return 2
     except OSError as exc:
         print(f"{TOOL_NAME}: error: {exc}", file=sys.stderr)
+        return 1
+    except Exception as exc:  # noqa: BLE001
+        print(f"{TOOL_NAME}: unexpected error: {exc}", file=sys.stderr)
         return 1
 
     if args.command == "hotspots":
