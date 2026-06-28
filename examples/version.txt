@@ -1,0 +1,3 @@
+$ codeglance-emit --version
+
+codeglance 0.1.0

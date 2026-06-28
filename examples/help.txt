@@ -1,0 +1,18 @@
+$ codeglance-emit --help
+
+usage: codeglance [-h] [--version] [--format {table,json}]
+                  {map,hotspots,deps} ...
+
+Repo onboarding map: architecture + hotspots for humans and agents.
+
+positional arguments:
+  {map,hotspots,deps}
+    map                 full onboarding map
+    hotspots            ranked files to read first
+    deps                internal dependency edges
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+  --format {table,json}
+                        output format (default: table)

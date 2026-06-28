@@ -20,6 +20,66 @@ pip install cognis-codeglance
 codeglance scan .            # → prioritized findings in seconds
 ```
 
+
+<!-- cognis:example:start -->
+## 🔎 Example output
+
+Real, reproducible output from the tool — runs offline:
+
+```console
+$ codeglance-emit --version
+codeglance 0.1.0
+```
+
+```console
+$ codeglance-emit --help
+usage: codeglance [-h] [--version] [--format {table,json}]
+                  {map,hotspots,deps} ...
+
+Repo onboarding map: architecture + hotspots for humans and agents.
+
+positional arguments:
+  {map,hotspots,deps}
+    map                 full onboarding map
+    hotspots            ranked files to read first
+    deps                internal dependency edges
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+  --format {table,json}
+                        output format (default: table)
+```
+
+> Blocks above are real `codeglance` output — reproduce them from a clone.
+
+**Sample result format** _(illustrative values — run on your own data for real findings):_
+
+```
+{
+  "time": "2023-02-15T14:30:00+0000",
+  "actor": {
+    "id": "1234567890123456",
+    "name": "John Doe"
+  },
+  "object": {
+    "id": "ABC123",
+    "name": "My Malicious Code"
+  },
+  "action": "EXECUTE",
+  "description": "This is a malicious code execution event.",
+  "data": [
+    {
+      "type": "file",
+      "path": "/path/to/malware.exe",
+      "size": 1024
+    }
+  ]
+}
+```
+
+<!-- cognis:example:end -->
+
 ## Usage — step by step
 
 1. **Install** the tool:
